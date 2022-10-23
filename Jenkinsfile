@@ -4,11 +4,13 @@ pipeline {
         stage('Code') {
             steps {
                sh 'git clone --branch features https://github.com/Sravia94/docker-sravia'
+               sh 'cd docker-sravia' 
             }
         }
         stage('Build') {
             steps {
-                sh 'step2.sh'
+                
+                sh 'docker-compose up -d'
             }
         }
        
