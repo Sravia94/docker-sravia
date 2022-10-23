@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Code') {
             steps {
-               sh 'step1.sh'
+               sh 'git clone --branch features https://github.com/Sravia94/docker-sravia'
             }
         }
         stage('Build') {
