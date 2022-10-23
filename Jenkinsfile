@@ -12,6 +12,8 @@ pipeline {
             steps {
                 sh 'chmod 777 steps.sh'
                 sh 'ls -l'
+                sh 'apt-get update'
+                sh 'apt install -y curl jq'
                 sh './steps.sh'
                 sh 'docker-compose up -d'
             }
