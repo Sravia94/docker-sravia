@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'ls -l'
+                sh 'chmod 777 steps.sh'
                 sh 'steps.sh'
                 sh 'docker-compose up -d'
             }
