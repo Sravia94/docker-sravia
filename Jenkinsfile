@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'chmod 777 steps.sh'
                 sh 'ls -l'
-                sh 'steps.sh'
+                sh './steps.sh'
                 sh 'docker-compose up -d'
             }
         }
